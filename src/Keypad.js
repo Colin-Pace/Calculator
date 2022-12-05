@@ -7,7 +7,7 @@ function Keypad(props) {
 
   return (
     <div>
-      <table>
+      <table> 
         <tbody>
           <tr>
             <th className = 'operation'>Rad</th>
@@ -26,7 +26,7 @@ function Keypad(props) {
             <th onClick = {e => handleOnClick(e)} abbr = '7' className = 'integer'>7</th>
             <th onClick = {e => handleOnClick(e)} abbr = '8' className = 'integer'>8</th>
             <th onClick = {e => handleOnClick(e)} abbr = '9' className = 'integer'>9</th>
-            <th className = 'operation'>%</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '÷' className = 'operation'>÷</th>
           </tr>
 
           <tr>
@@ -36,7 +36,7 @@ function Keypad(props) {
             <th onClick = {e => handleOnClick(e)} abbr = '4' className = 'integer'>4</th>
             <th onClick = {e => handleOnClick(e)} abbr = '5' className = 'integer'>5</th>
             <th onClick = {e => handleOnClick(e)} abbr = '6' className = 'integer'>6</th>
-            <th className = 'operation'>x</th>
+            <th onClick = {e => handleOnClick(e)} abbr = 'x' className = 'operation'>x</th>
           </tr>
 
           <tr>
@@ -46,7 +46,7 @@ function Keypad(props) {
             <th onClick = {e => handleOnClick(e)} abbr = '1' className = 'integer'>1</th>
             <th onClick = {e => handleOnClick(e)} abbr = '2' className = 'integer'>2</th>
             <th onClick = {e => handleOnClick(e)} abbr = '3' className = 'integer'>3</th>
-            <th className = 'operation'>-</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '-' className = 'operation'>-</th>
           </tr>
 
           <tr>
@@ -55,8 +55,8 @@ function Keypad(props) {
             <th className = 'operation'>exp</th>
             <th onClick = {e => handleOnClick(e)} abbr = '0' className = 'integer'>0</th>
             <th id = 'period' className = 'integer'>.</th>
-            <th className = 'equalsSign'>=</th>
-            <th className = 'operation'>+</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '=' className = 'equalsSign'>=</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '+' className = 'operation'>+</th>
           </tr>
         </tbody>
       </table>
