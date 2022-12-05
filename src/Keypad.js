@@ -1,4 +1,5 @@
 import './Keypad.css';
+import {useEffect} from 'react';
 
 function Keypad(props) {
   const handleOnClick = e => {
@@ -16,7 +17,11 @@ function Keypad(props) {
             <th className = 'operation'>(</th>
             <th className = 'operation'>)</th>
             <th className = 'operation'>%</th>
-            <th className = 'operation'>AC</th>
+            <th 
+              onClick = {e => handleOnClick(e)} 
+              abbr = {props.allClear === true ? 'AC' : 'CE'} 
+              className = 'operation'>{ props.allClear === true ? 'AC' : 'CE' }
+            </th>
           </tr>
 
           <tr>
@@ -36,7 +41,7 @@ function Keypad(props) {
             <th onClick = {e => handleOnClick(e)} abbr = '4' className = 'integer'>4</th>
             <th onClick = {e => handleOnClick(e)} abbr = '5' className = 'integer'>5</th>
             <th onClick = {e => handleOnClick(e)} abbr = '6' className = 'integer'>6</th>
-            <th onClick = {e => handleOnClick(e)} abbr = 'x' className = 'operation'>x</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '*' className = 'operation'>*</th>
           </tr>
 
           <tr>

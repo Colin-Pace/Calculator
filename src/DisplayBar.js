@@ -17,7 +17,9 @@ function DisplayBar(props) {
         <div id = {expressionShown === false ? '' : 'expression'}>
           {props.expression}
         </div>
-        {props.display}
+        <div id = 'display'>
+          {props.display}
+        </div>
       </div>
     </div>
   );
