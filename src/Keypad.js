@@ -31,7 +31,7 @@ function Keypad(props) {
             <th onClick = {e => handleOnClick(e)} abbr = '7' className = 'integer'>7</th>
             <th onClick = {e => handleOnClick(e)} abbr = '8' className = 'integer'>8</th>
             <th onClick = {e => handleOnClick(e)} abbr = '9' className = 'integer'>9</th>
-            <th onClick = {e => handleOnClick(e)} abbr = '÷' className = 'operation'>÷</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '/' className = 'operation'>/</th>
           </tr>
 
           <tr>
@@ -59,7 +59,12 @@ function Keypad(props) {
             <th className = 'operation'>EXP</th>
             <th className = 'operation'>exp</th>
             <th onClick = {e => handleOnClick(e)} abbr = '0' className = 'integer'>0</th>
-            <th id = 'period' className = 'integer'>.</th>
+            <th 
+              onClick = {e => handleOnClick(e)} 
+              abbr = '.' 
+              id = 'period' 
+              className = 'integer'
+            >.</th>
             <th onClick = {e => handleOnClick(e)} abbr = '=' className = 'equalsSign'>=</th>
             <th onClick = {e => handleOnClick(e)} abbr = '+' className = 'operation'>+</th>
           </tr>
