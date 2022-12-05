@@ -4,10 +4,14 @@ import Keypad from './Keypad';
 import {useEffect, useState} from 'react';
 
 function App() {
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState('0');
 
   const onHandleClick = value => {
-    console.log(value);
+    if (display === '0') {
+      setDisplay(value)
+    } else {
+      setDisplay(display + value);
+    }
   }
 
   return (
