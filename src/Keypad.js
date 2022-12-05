@@ -14,9 +14,9 @@ function Keypad(props) {
             <th className = 'operation'>Rad</th>
             <th className = 'operation'>Deg</th>
             <th className = 'operation'>x!</th>
-            <th className = 'operation'>(</th>
-            <th className = 'operation'>)</th>
-            <th className = 'operation'>%</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '(' className = 'operation'>(</th>
+            <th onClick = {e => handleOnClick(e)} abbr = ')' className = 'operation'>)</th>
+            <th onClick = {e => handleOnClick(e)} abbr = '%' className = 'operation'>%</th>
             <th 
               onClick = {e => handleOnClick(e)} 
               abbr = {props.allClear === true ? 'AC' : 'CE'} 
