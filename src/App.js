@@ -21,16 +21,20 @@ function App() {
         setDisplay('0.');
       } else {
         setDisplay(value);
+        setAllClear(false);
       }
     } else if (value === 'AC') {
       setDisplay('0');
       setExpression('')
     } else if (value === 'CE') {
       let result = display.toString();
-      if (result === '0') {
-        return;
-      } else if (result[result.length - 1] === ' ') {
-        result = result.substring(0, result.length - 2);
+      if (result[result.length - 1] === ' ') {
+        if (result.length === 2) {
+          setDisplay('0');
+        } else {
+          result = result.substring(0, result.length - 2);
+          setDisplay(result);
+        }
       } else {
         if (result.length === 1) {
           setDisplay('0');
